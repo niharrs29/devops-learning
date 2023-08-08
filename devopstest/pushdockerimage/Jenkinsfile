@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh 'docker build -t niharrs29/dockerpushtest ./pushdockerimage/' (this will use the tag latest)
-		sh 'docker build -t niharrs29/devops-learning/devopstest/pushdockerimage/:$BUILD_NUMBER ./pushdockerimage/'
+		sh 'docker build -t niharrs29/devopstest/pushdockerimage/:$BUILD_NUMBER ./devops-learning/devopstest/pushdockerimage/'
             }
         }
         stage('Docker Login') {
